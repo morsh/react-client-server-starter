@@ -1,0 +1,30 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules/
+
+# testing
+/coverage
+/client/coverage
+
+# build files
+/build
+
+# client build files
+/client/build
+
+# misc
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# generated files
+client/**/*.css
+
+# generated merge temp files
+*.orig
+
+# private files
+*.private.*

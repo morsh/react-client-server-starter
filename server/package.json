@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:4000/",
+  "dependencies": {
+    "@types/lodash": "^4.14.106",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "lodash": "^4.17.5",
+    "morgan": "^1.9.0",
+    "ms-rest-azure": "^2.5.5",
+    "passport": "^0.4.0",
+    "passport-azure-ad": "^3.0.12",
+    "xhr-request": "^1.1.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
