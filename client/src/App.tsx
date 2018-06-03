@@ -11,7 +11,7 @@ import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
 
-interface NavSettings {
+interface INavSettings {
   exact?: boolean;
   label: string;
   to: string;
@@ -20,7 +20,7 @@ interface NavSettings {
 }
 
 const DEFAULT_TITLE = 'Welcome';
-const navItems: NavSettings[] = [
+const navItems: INavSettings[] = [
   {
     exact: true,
     label: 'Home',
@@ -51,7 +51,7 @@ const navItems: NavSettings[] = [
 class App extends React.Component {
 
   getLocationTitle(location: H.Location): string {
-    let currentPage = navItems.find(item => item.to === location.pathname);
+    const currentPage = navItems.find(item => item.to === location.pathname);
     return currentPage && currentPage.label || DEFAULT_TITLE;
   }
 

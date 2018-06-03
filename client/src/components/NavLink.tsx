@@ -2,14 +2,14 @@ import * as React from 'react';
 import { Link as RouterLink, Route } from 'react-router-dom';
 import { FontIcon, ListItem } from 'react-md';
 
-interface Props {
+interface IProps {
   label: string;
   to: string;
   exact?: boolean;
   icon?: string;
 }
 
-export default class NavLink extends React.Component<Props> {
+export default class NavLink extends React.Component<IProps> {
   render() {
 
     const { label, to, exact, icon } = this.props;

@@ -1,17 +1,22 @@
 {
   "name": "react-client-server-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
+  "engines": {
+    "npm": "5.6.0",
+    "node": "8.11.1"
+  },
   "dependencies": {
     "npm-run-all": "^4.1.2"
   },
   "scripts": {
-    "build": "cd client && yarn build",
+    "build": "cd client && npm build",
     "start": "node server",
-    "start:client": "cd client && yarn start",
-    "start:server": "cd server && yarn start",
+    "start:client": "cd client && npm start",
+    "start:server": "cd server && npm start",
     "start:dev": "npm-run-all -p start:client start:server",
-    "postinstall": "cd client && yarn && cd ../server && yarn"
+    "install:dev": "npm i && cd client && yarn && cd ../server && npm i",
+    "postinstall": "cd server && npm i"
   },
   "license": "MIT"
 }

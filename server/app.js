@@ -6,7 +6,11 @@ const morgan = require('morgan');
 const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
-const authRouter = require('./routes/auth');
+
+require('dotenv').config();
+
+// !! Uncomment the following lines to enable authentication
+// const authRouter = require('./routes/auth');
 const apiRouter = require('./routes/api');
 
 const app = express();
@@ -24,12 +28,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Setup logger
 app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
 
+// !! Uncomment the following lines to enable authentication
+// app.use(authRouter.authenticationMiddleware('/auth'));
+// app.use('/auth', authRouter.router);
 app.use('/api', apiRouter.router);
 
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
 // Always return the main index.html, so react-router render the route in the client
+// Always return the main index.html, so react-router render the route in the client
 app.get('*', (req, res) => {
+  res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+  res.header('Expires', '-1');
+  res.header('Pragma', 'no-cache');
   res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 });
 

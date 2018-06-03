@@ -1,0 +1,32 @@
+@import '../globals';
+
+.react-calendar-timeline {
+  .rct-sidebar .rct-sidebar-header {
+    background: $md-secondary-color;
+  }
+
+  .rct-header .rct-label-group {
+    background: $md-secondary-color;
+  }
+
+  .rct-scroll {
+    overflow: hidden;
+  }
+
+  .rct-items .rct-item {
+    overflow: visible;
+
+    .rct-item-overflow {
+      overflow: visible;
+    }
+  }
+
+  .rct-item-content {
+    
+    width: 100%;
+
+    .timeline-item:hover {
+      background-color: rgba(256, 256, 256, 0.4);
+    }
+  }
+}

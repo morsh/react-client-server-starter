@@ -11,19 +11,19 @@ export default class Page2 extends React.Component {
         <Card className="md-cell">
           <CardTitle title="Card 1" />
           <CardText>
-            <p>Wowza</p>
+            <div>Wowza</div>
           </CardText>
         </Card>
         <Card className="md-cell">
           <CardTitle title="Card 2" />
           <CardText>
-            <p>Wowza</p>
+            <div>Wowza</div>
           </CardText>
         </Card>
         <Card className="md-cell">
           <CardTitle title="Card 3" />
           <CardText>
-            <p>Wowza</p>
+            <div>Wowza</div>
           </CardText>
         </Card>
       </div>
