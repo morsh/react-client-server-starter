@@ -10,12 +10,12 @@
     "npm-run-all": "^4.1.2"
   },
   "scripts": {
-    "build": "cd client && npm build",
+    "build": "cd client && npm run build",
     "start": "node server",
     "start:client": "cd client && npm start",
     "start:server": "cd server && npm start",
     "start:dev": "npm-run-all -p start:client start:server",
-    "install:dev": "npm i && cd client && yarn && cd ../server && npm i",
+    "install:dev": "npm i && cd client && npm i && cd ../server && npm i",
     "postinstall": "cd server && npm i"
   },
   "license": "MIT"

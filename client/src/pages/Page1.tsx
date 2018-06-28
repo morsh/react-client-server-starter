@@ -8,14 +8,10 @@ interface IState {
 
 export default class Page1 extends React.Component<{}, IState> {
 
-  constructor(props: {}) {
-    super(props);
-
-    this.state = {
-      str1: 'None',
-      str2: 'None'
-    };
-  }
+  state = {
+    str1: 'None',
+    str2: 'None'
+  };
 
   getHelloWorld() {
     return this.state.str1 + ' ' + this.state.str2;
