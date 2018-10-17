@@ -32,7 +32,7 @@ npm install
 
 Dev:
 ```sh
-npm start:dev
+npm run start:dev
 ```
 
 Production:
