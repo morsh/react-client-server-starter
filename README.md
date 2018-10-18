@@ -45,3 +45,15 @@ npm start
 ```sh
 npm run build
 ```
+
+# Production
+
+For this sample to run in production you'll need:
+
+1. To build the solution using `npm run build`
+2. To run `npm start` to start the server (The client is only used during development and testing)
+
+To do that you'll have to take one of the following appoaches:
+
+1. Build in dev (or other pre-prod) environment, check-in the `./build` folder
+2. Build in production - this will require running `npm install` and is not advisable
