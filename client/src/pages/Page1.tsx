@@ -29,6 +29,21 @@ export default class Page1 extends React.Component<IProps, IState> {
     this.dataStore = this.props.dataStore!;
   }
 
+  componentDidMount() {
+
+    // The following will run 3 seconds after the page has loaded and will change the state of the
+    // component to say 'Hello World'
+    setTimeout(
+      () => {
+        this.setState({
+          str1: 'Hello',
+          str2: 'World'
+        });
+      },
+      3000
+    );
+  }
+
   getHelloWorld() {
     return this.state.str1 + ' ' + this.state.str2;
   }
