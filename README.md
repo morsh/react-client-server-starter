@@ -56,4 +56,4 @@ For this sample to run in production you'll need:
 To do that you'll have to take one of the following appoaches:
 
 1. Build in dev (or other pre-prod) environment, check-in the `./build` folder
-2. Build in production - this will require running `npm install` and is not advisable
+2. Build in production - this will require running `npm run install:dev` and is not advisable
